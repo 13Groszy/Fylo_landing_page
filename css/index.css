@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;0,700;1,400;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+body {
+  background-color: #1c2431;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+body header {
+  display: flex;
+  justify-content: space-around;
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+  margin-bottom: 2rem;
+  padding-top: 1rem;
+  background-color: #1c2431;
+}
+body header img {
+  height: 25px;
+  padding: 1rem;
+}
+body header nav {
+  font-size: 14px;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+body main {
+  background-color: #181f2a;
+  font-size: 14px;
+}
+body main section {
+  margin-bottom: 5rem;
+  width: 90%;
+  margin: auto;
+}
+body main .intro {
+  width: 100%;
+  background-color: #1c2431;
+  position: relative;
+  z-index: 0;
+}
+body main .intro::before {
+  content: "";
+  background-image: url("../images/bg-curvy-mobile.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100vw;
+  height: 200px;
+  z-index: -1;
+  left: 0;
+  top: 275px;
+}
+body main .intro img {
+  width: 80%;
+}
+body main .intro h1 {
+  padding-inline: 5%;
+}
+body main .intro__background {
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+}
+body main .intro__wrapper {
+  background-color: #181f2a;
+}
+body main .intro__wrapper p {
+  margin-bottom: 2rem;
+  padding-inline: 10%;
+}
+body main .intro__wrapper button {
+  background: linear-gradient(0.25turn, #24bcb2, #339ecc);
+  font-size: 1rem;
+  border: none;
+  border-radius: 2rem;
+  padding: 20px;
+  width: 75%;
+}
+body main .benefits h3 {
+  margin-bottom: 1rem;
+}
+body main .benefits img {
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+}
+body main .info img {
+  width: 90%;
+}
+body main .info__text {
+  text-align: left;
+}
+body main .info__text h3, body main .info__text p {
+  margin-bottom: 1rem;
+}
+body main .info__text_link {
+  width: 50%;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #65e2d9;
+  display: flex;
+  width: 150px;
+  justify-content: space-between;
+  align-items: center;
+}
+body main .info__text_link a {
+  text-decoration: none;
+  color: #65e2d9;
+}
+body main .info__text_link img {
+  margin: 0px;
+  height: 1rem;
+  width: 1rem;
+}
+body main .opinions {
+  text-align: left;
+  display: flex;
+  margin-inline: 1rem;
+}
+body main .opinions:first-child {
+  margin-top: 8rem;
+  position: relative;
+}
+body main .opinions:first-child::before {
+  content: "";
+  background: url("../images/bg-quotes.png");
+  background-size: 1.5rem 1.5rem;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 1.5rem;
+  top: 0.5rem;
+  left: 0.2rem;
+}
+body main .opinions__item {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #202a3c;
+}
+body main .opinions__author {
+  display: flex;
+  height: 50px;
+  margin-top: 1.5rem;
+}
+body main .opinions__author img {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  margin-right: 0.5rem;
+}
+body main .subscription {
+  background-color: #1c2431;
+  border-radius: 5px;
+  transform: translateY(50%);
+}
+body main .subscription h3 {
+  padding-top: 2rem;
+}
+body main .subscription p {
+  padding: 1rem;
+}
+body main .subscription input {
+  width: 250px;
+  max-width: 250px;
+  padding: 20px;
+  border-radius: 30px;
+  border: none;
+  margin: 1rem;
+}
+body main .subscription button {
+  width: 290px;
+  background: linear-gradient(0.25turn, #24bcb2, #339ecc);
+  font-size: 1rem;
+  border: none;
+  border-radius: 2rem;
+  padding: 20px;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+body footer {
+  background-color: #0b1523;
+  padding-top: 250px;
+  text-align: left;
+}
+body footer img {
+  margin-left: 2rem;
+}
+body footer .content_wrapper {
+  width: 90%;
+  margin: auto;
+  margin-top: 2rem;
+  flex-direction: column;
+  font-size: 1rem;
+}
+body footer .content_wrapper i {
+  margin: 0.5rem;
+}
+body footer .content_wrapper div {
+  display: flex;
+  margin-block: 0.5rem;
+}
+body footer .content_wrapper .column {
+  display: flex;
+  flex-direction: column;
+}
+body footer .content_wrapper .about {
+  margin-left: 1rem;
+  margin-top: 2rem;
+}
+body footer .content_wrapper .about p {
+  margin-block: 0.5rem;
+}
+body footer .content_wrapper .socials {
+  width: 100px;
+  margin: auto;
+  margin-top: 4rem;
+}
+body footer .content_wrapper .socials i {
+  padding: 6px;
+  border-radius: 20px;
+  border: 1px solid white;
+}
