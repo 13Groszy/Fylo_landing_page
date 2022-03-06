@@ -20,9 +20,20 @@ body header {
   padding-top: 1rem;
   background-color: #1c2431;
 }
+@media (min-width: 1440px) {
+  body header {
+    justify-content: space-between;
+    margin-inline: 3rem;
+  }
+}
 body header img {
   height: 25px;
   padding: 1rem;
+}
+@media (min-width: 1440px) {
+  body header img {
+    height: 40px;
+  }
 }
 body header nav {
   font-size: 14px;
@@ -40,6 +51,11 @@ body main section {
   width: 90%;
   margin: auto;
 }
+@media (min-width: 1440px) {
+  body main section {
+    width: 60%;
+  }
+}
 body main .intro {
   width: 100%;
   background-color: #1c2431;
@@ -52,7 +68,7 @@ body main .intro::before {
   background-repeat: no-repeat;
   position: absolute;
   width: 100vw;
-  height: 200px;
+  height: 100%;
   z-index: -1;
   left: 0;
   top: 275px;
@@ -60,8 +76,21 @@ body main .intro::before {
 body main .intro img {
   width: 80%;
 }
+@media (min-width: 1440px) {
+  body main .intro img {
+    width: 40%;
+  }
+}
 body main .intro h1 {
   padding-inline: 5%;
+}
+@media (min-width: 1440px) {
+  body main .intro h1 {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    font-size: 2rem;
+  }
 }
 body main .intro__background {
   margin-top: 6rem;
@@ -69,6 +98,11 @@ body main .intro__background {
 }
 body main .intro__wrapper {
   background-color: #181f2a;
+}
+@media (min-width: 1440px) {
+  body main .intro__wrapper {
+    background-color: #1c2431;
+  }
 }
 body main .intro__wrapper p {
   margin-bottom: 2rem;
@@ -81,6 +115,13 @@ body main .intro__wrapper button {
   border-radius: 2rem;
   padding: 20px;
   width: 75%;
+}
+@media (min-width: 1440px) {
+  body main .intro__wrapper p, body main .intro__wrapper button {
+    width: 40%;
+    margin: auto;
+    margin-top: 2rem;
+  }
 }
 body main .benefits h3 {
   margin-bottom: 1rem;
@@ -116,6 +157,13 @@ body main .info__text_link img {
   height: 1rem;
   width: 1rem;
 }
+@media (min-width: 1440px) {
+  body main .opinions_wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+  }
+}
 body main .opinions {
   text-align: left;
   display: flex;
@@ -124,6 +172,11 @@ body main .opinions {
 body main .opinions:first-child {
   margin-top: 8rem;
   position: relative;
+}
+@media (min-width: 1440px) {
+  body main .opinions:first-child {
+    margin-top: 0;
+  }
 }
 body main .opinions:first-child::before {
   content: "";
@@ -160,6 +213,11 @@ body main .subscription {
 body main .subscription h3 {
   padding-top: 2rem;
 }
+@media (min-width: 1440px) {
+  body main .subscription h3 {
+    font-size: 1.5rem;
+  }
+}
 body main .subscription p {
   padding: 1rem;
 }
@@ -171,6 +229,13 @@ body main .subscription input {
   border: none;
   margin: 1rem;
 }
+@media (min-width: 1440px) {
+  body main .subscription input {
+    width: 500px;
+    max-width: 500px;
+    padding: 15px;
+  }
+}
 body main .subscription button {
   width: 290px;
   background: linear-gradient(0.25turn, #24bcb2, #339ecc);
@@ -181,6 +246,12 @@ body main .subscription button {
   margin-top: 0.5rem;
   margin-bottom: 2rem;
 }
+@media (min-width: 1440px) {
+  body main .subscription button {
+    padding: 15px;
+    width: 200px;
+  }
+}
 body footer {
   background-color: #0b1523;
   padding-top: 250px;
@@ -189,12 +260,35 @@ body footer {
 body footer img {
   margin-left: 2rem;
 }
+@media (min-width: 1440px) {
+  body footer img {
+    margin-left: 4rem;
+  }
+}
 body footer .content_wrapper {
   width: 90%;
   margin: auto;
   margin-top: 2rem;
-  flex-direction: column;
   font-size: 1rem;
+}
+@media (min-width: 1440px) {
+  body footer .content_wrapper {
+    width: 100%;
+  }
+}
+@media (min-width: 1440px) {
+  body footer .content_wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-around;
+    transform: translateY(-20%);
+  }
+}
+@media (min-width: 1440px) {
+  body footer .content_wrapper .location {
+    width: 30%;
+  }
 }
 body footer .content_wrapper i {
   margin: 0.5rem;
@@ -218,6 +312,11 @@ body footer .content_wrapper .socials {
   width: 100px;
   margin: auto;
   margin-top: 4rem;
+}
+@media (min-width: 1440px) {
+  body footer .content_wrapper .socials {
+    margin: 0;
+  }
 }
 body footer .content_wrapper .socials i {
   padding: 6px;

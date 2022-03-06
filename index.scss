@@ -6,6 +6,8 @@
                 padding:20px;
 }
 
+$desktopWidth: 1440px;
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;0,700;1,400;1,700&display=swap');
 *{
@@ -26,9 +28,19 @@ body{
         margin-bottom: 2rem;
         padding-top:1rem;
         background-color: hsl(217, 28%, 15%);
+
+        @media (min-width:$desktopWidth) {
+            justify-content: space-between;
+            margin-inline: 3rem;
+        }
+
         img{
             height: 25px;
             padding:1rem;
+
+            @media (min-width:$desktopWidth) {
+            height: 40px;
+            }
         }
         
         nav{
@@ -48,6 +60,10 @@ body{
             margin-bottom:5rem;
             width:90%;
             margin: auto;
+
+            @media (min-width:$desktopWidth) {
+                width:60%;
+            }
         }
     
         .intro{
@@ -62,7 +78,7 @@ body{
                 background-repeat: no-repeat;
                 position: absolute;
                 width:100vw;
-                height: 200px;
+                height: 100%;
                 z-index: -1;
                 left:0;
                 top:275px;
@@ -70,9 +86,19 @@ body{
 
             img{
                 width:80%;
+                @media (min-width:$desktopWidth) {
+                    width:40%;
+                }
             }
             h1{
                 padding-inline: 5%;
+                
+                @media (min-width:$desktopWidth) {
+                    width:50%;
+                    text-align: center;
+                    margin:auto;
+                    font-size: 2rem;
+                }
             }
             &__background{
                 margin-top:6rem;
@@ -80,6 +106,9 @@ body{
             }            
             &__wrapper{
                 background-color:hsl(218, 28%, 13%);
+                @media (min-width:$desktopWidth) {
+                    background-color: hsl(217, 28%, 15%);
+                }
 
                 p{
                    margin-bottom: 2rem;
@@ -88,6 +117,13 @@ body{
                 button{
                     @include button;
                    width:75%;
+                }
+                p, button{
+                    @media (min-width:$desktopWidth) {
+                        width:40%;
+                        margin:auto;
+                        margin-top:2rem;
+                    }
                 }
 
             }
@@ -136,6 +172,14 @@ body{
             
             
         }
+        .opinions_wrapper{
+            @media (min-width:$desktopWidth) {
+                display: flex;
+                flex-direction: row;
+                width:75%;
+            }
+            
+        }
         .opinions{
             text-align: left;
             display: flex;
@@ -145,6 +189,10 @@ body{
             &:first-child{
                 margin-top:8rem;
                 position: relative;
+                @media (min-width:$desktopWidth) {
+                    margin-top:0;
+                }
+                
                 &::before{
                     content: "";
                     background: url("../images/bg-quotes.png");
@@ -185,6 +233,9 @@ body{
             transform: translateY(50%);
             h3{
                 padding-top:2rem;
+                @media (min-width:$desktopWidth) {
+                    font-size: 1.5rem;
+                }
             }
             p{
                 padding:1rem;
@@ -196,12 +247,21 @@ body{
                 border-radius: 30px;
                 border:none;
                 margin:1rem;
+                @media (min-width:$desktopWidth) {
+                    width:500px;
+                    max-width: 500px;
+                    padding:15px;
+                }
             }
             button{
                 width:290px;
                 @include button;
                 margin-top:0.5rem;
                 margin-bottom: 2rem;
+                @media (min-width:$desktopWidth) {
+                    padding:15px;
+                    width:200px;
+                }
             }
         }
     }
@@ -213,13 +273,30 @@ body{
 
         img{
             margin-left:2rem;
+            @media (min-width:$desktopWidth) {
+                margin-left:4rem;
+            }
         }
         .content_wrapper{
             width:90%;
             margin:auto;
             margin-top: 2rem;
-            flex-direction: column;
             font-size: 1rem;
+            @media (min-width:$desktopWidth) {
+                width:100%;
+            }
+
+            @media (min-width:$desktopWidth) {
+                display: flex;
+                flex-direction: row;              align-items: baseline;
+                justify-content: space-around;
+                transform: translateY(-20%);
+            }
+            .location{
+                @media (min-width:$desktopWidth) {
+                    width:30%;
+                }
+            }
             i{
                 margin:0.5rem;
             }
@@ -243,6 +320,11 @@ body{
                 width:100px;
                 margin:auto;
                 margin-top:4rem;
+
+                @media(min-width:$desktopWidth){
+                    margin:0;
+                }
+
                 i{
                     padding:6px;
                     border-radius: 20px;
