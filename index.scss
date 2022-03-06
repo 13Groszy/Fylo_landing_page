@@ -32,6 +32,7 @@ body{
         }
         
         nav{
+            font-size: 14px;
             padding:1rem;
             display: flex;
             gap:1rem;
@@ -52,19 +53,43 @@ body{
         .intro{
             width:100%;
             background-color: hsl(217, 28%, 15%);
+            position: relative;
+            z-index: 0;
+
+            &::before{
+                content: "";
+                background-image: url("../images/bg-curvy-mobile.svg");
+                background-repeat: no-repeat;
+                position: absolute;
+                width:100vw;
+                height: 200px;
+                z-index: -1;
+                left:0;
+                top:275px;
+            }
+
             img{
                 width:80%;
             }
-            h1, p{
-                margin-bottom: 1.5rem;
-            }
-            button{
-                @include button;
-                width:75%;
+            h1{
+                padding-inline: 5%;
             }
             &__background{
                 margin-top:6rem;
                 margin-bottom: 2rem;
+            }            
+            &__wrapper{
+                background-color:hsl(218, 28%, 13%);
+
+                p{
+                   margin-bottom: 2rem;
+                   padding-inline: 10%;
+                }
+                button{
+                    @include button;
+                   width:75%;
+                }
+
             }
             }
         .benefits{
@@ -115,9 +140,24 @@ body{
             text-align: left;
             display: flex;
             margin-inline: 1rem;
+            
 
             &:first-child{
                 margin-top:8rem;
+                position: relative;
+                &::before{
+                    content: "";
+                    background: url("../images/bg-quotes.png");
+                    background-size: 1.5rem 1.5rem;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    width:100%;
+                    height: 1.5rem;
+                    top:0.5rem;
+                    left:0.2rem;
+                }
+
+                
             }
 
             &__item{
@@ -175,7 +215,7 @@ body{
             margin-left:2rem;
         }
         .content_wrapper{
-            width:80%;
+            width:90%;
             margin:auto;
             margin-top: 2rem;
             flex-direction: column;

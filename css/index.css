@@ -25,6 +25,7 @@ body header img {
   padding: 1rem;
 }
 body header nav {
+  font-size: 14px;
   padding: 1rem;
   display: flex;
   gap: 1rem;
@@ -42,24 +43,44 @@ body main section {
 body main .intro {
   width: 100%;
   background-color: #1c2431;
+  position: relative;
+  z-index: 0;
+}
+body main .intro::before {
+  content: "";
+  background-image: url("../images/bg-curvy-mobile.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100vw;
+  height: 200px;
+  z-index: -1;
+  left: 0;
+  top: 275px;
 }
 body main .intro img {
   width: 80%;
 }
-body main .intro h1, body main .intro p {
-  margin-bottom: 1.5rem;
+body main .intro h1 {
+  padding-inline: 5%;
 }
-body main .intro button {
+body main .intro__background {
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+}
+body main .intro__wrapper {
+  background-color: #181f2a;
+}
+body main .intro__wrapper p {
+  margin-bottom: 2rem;
+  padding-inline: 10%;
+}
+body main .intro__wrapper button {
   background: linear-gradient(0.25turn, #24bcb2, #339ecc);
   font-size: 1rem;
   border: none;
   border-radius: 2rem;
   padding: 20px;
   width: 75%;
-}
-body main .intro__background {
-  margin-top: 6rem;
-  margin-bottom: 2rem;
 }
 body main .benefits h3 {
   margin-bottom: 1rem;
@@ -102,6 +123,18 @@ body main .opinions {
 }
 body main .opinions:first-child {
   margin-top: 8rem;
+  position: relative;
+}
+body main .opinions:first-child::before {
+  content: "";
+  background: url("../images/bg-quotes.png");
+  background-size: 1.5rem 1.5rem;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 1.5rem;
+  top: 0.5rem;
+  left: 0.2rem;
 }
 body main .opinions__item {
   margin-top: 2rem;
@@ -157,7 +190,7 @@ body footer img {
   margin-left: 2rem;
 }
 body footer .content_wrapper {
-  width: 80%;
+  width: 90%;
   margin: auto;
   margin-top: 2rem;
   flex-direction: column;
