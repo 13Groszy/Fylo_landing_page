@@ -62,7 +62,7 @@ body{
             margin: auto;
 
             @media (min-width:$desktopWidth) {
-                width:60%;
+                width:70%;
             }
         }
     
@@ -82,6 +82,12 @@ body{
                 z-index: -1;
                 left:0;
                 top:275px;
+                @media (min-width:$desktopWidth) {
+                   background-size: 100%;
+                   height:100%;
+                   top: 0;
+                   transform: translateY(40%);
+                }
             }
 
             img{
@@ -107,23 +113,29 @@ body{
             &__wrapper{
                 background-color:hsl(218, 28%, 13%);
                 @media (min-width:$desktopWidth) {
-                    background-color: hsl(217, 28%, 15%);
+                    background: transparent;
+                    margin-bottom: 6rem;
                 }
 
                 p{
                    margin-bottom: 2rem;
                    padding-inline: 10%;
                 }
-                button{
-                    @include button;
-                   width:75%;
-                }
+                
                 p, button{
                     @media (min-width:$desktopWidth) {
-                        width:40%;
+                        width:30%;
                         margin:auto;
                         margin-top:2rem;
                     }
+                }
+                button{
+                    @include button;
+                   width:300px;
+                   @media (min-width:$desktopWidth) {
+                   padding: 1rem;
+                   width:200px;
+                }
                 }
 
             }
@@ -136,11 +148,35 @@ body{
                 margin-top:6rem;
                 margin-bottom: 2rem;
             }
+            @media (min-width:$desktopWidth) {
+            display: flex;
+            flex-wrap: wrap;
+            }
+            &__item{
+                @media (min-width:$desktopWidth) {
+                    width:50%;
+                }
+                p{
+                    @media (min-width:$desktopWidth) {
+                    width:70%;
+                    margin: auto;
+                    }
+                }
+            }
         }
         .info{
+            @media (min-width:$desktopWidth) {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            margin-block:8rem;
+            }
             
             img{
                 width:90%;
+                @media (min-width:$desktopWidth) {
+                 width:50%; 
+                }
             }
 
             &__text{
@@ -148,6 +184,12 @@ body{
                 
                 h3, p{
                     margin-bottom: 1rem;
+                }
+                h3{
+                    @media (min-width:$desktopWidth) {
+                    font-size: 2rem;
+                    width:60%;
+                    }
                 }
                 &_link{
                     width:50%;
@@ -203,6 +245,11 @@ body{
                     height: 1.5rem;
                     top:0.5rem;
                     left:0.2rem;
+                    @media (min-width:$desktopWidth) {
+                    background-size: 2.5rem;
+                    height:2.5rem;
+                    left:-0.5rem;
+                    }
                 }
 
                 
