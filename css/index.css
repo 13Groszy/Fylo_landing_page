@@ -42,6 +42,13 @@ body header nav {
   gap: 1rem;
   align-items: center;
 }
+body header nav p {
+  opacity: 0.7;
+}
+body header nav p:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
 body main {
   background-color: #181f2a;
   font-size: 14px;
@@ -131,6 +138,9 @@ body main .intro__wrapper button {
   border-radius: 2rem;
   padding: 20px;
   width: 300px;
+}
+body main .intro__wrapper button:hover {
+  background: linear-gradient(0.25turn, #7ae6df, #99cfe6);
 }
 @media (min-width: 1440px) {
   body main .intro__wrapper button {
@@ -267,6 +277,7 @@ body main .subscription {
   background-color: #1c2431;
   border-radius: 5px;
   transform: translateY(50%);
+  position: relative;
 }
 body main .subscription h3 {
   padding-top: 2rem;
@@ -279,13 +290,21 @@ body main .subscription h3 {
 body main .subscription p {
   padding: 1rem;
 }
+@media (min-width: 1440px) {
+  body main .subscription p {
+    width: 60%;
+    margin: auto;
+  }
+}
 body main .subscription input {
+  color: #000;
   width: 250px;
   max-width: 250px;
   padding: 20px;
   border-radius: 30px;
   border: none;
   margin: 1rem;
+  outline: none;
 }
 @media (min-width: 1440px) {
   body main .subscription input {
@@ -304,11 +323,31 @@ body main .subscription button {
   margin-top: 0.5rem;
   margin-bottom: 2rem;
 }
+body main .subscription button:hover {
+  background: linear-gradient(0.25turn, #7ae6df, #99cfe6);
+}
 @media (min-width: 1440px) {
   body main .subscription button {
     padding: 15px;
     width: 200px;
   }
+}
+body main .subscription__failed {
+  color: red;
+  position: absolute;
+  font-size: 10px;
+  font-weight: bolder;
+  left: 4rem;
+  bottom: 5rem;
+}
+@media (min-width: 1440px) {
+  body main .subscription__failed {
+    left: -4rem;
+    bottom: 0;
+  }
+}
+body main .subscription .display {
+  display: none;
 }
 body footer {
   background-color: #0b1523;

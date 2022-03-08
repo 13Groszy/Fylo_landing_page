@@ -28,7 +28,7 @@
           Fylo stores all your most important files in one secure location. Access them wherever
           you need, share and collaborate with friends family, and co-workers.
         </p>
-        <button>Get Started</button>
+        <button onclick="window.location.href='#subscription'">Get Started</button>
       </div>
     </section>
 
@@ -116,12 +116,13 @@
       </div>
     </section>
 
-    <section class="subscription">
+    <section id="subscription" class="subscription">
       <h3>Get early access today</h3>
       <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.
       </p>
-      <input type="text" name="" id="" placeholder="email@example.com">
-      <button>Get Started For Free</button>
+      <input type="text" class="subscription__input" placeholder="email@example.com">
+      <button  onclick="checkMail()">Get Started For Free</button>
+      <p class="subscription__failed display">Please enter a valid email address</p>
     </section>
   </main>
 
